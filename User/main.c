@@ -46,7 +46,7 @@ void TIM1_PWMOut() {
 
     // Set PWM mode for CH4
     TIM1->CHCTLR2 &= ~(7 << 12);                // Clear OC4M bits
-    TIM1->CHCTLR2 |= (6 << 12);                 // PWM mode 2
+    TIM1->CHCTLR2 |= (7 << 12);                 // PWM mode 2
     TIM1->CHCTLR2 |= (1 << 11);                 // Enable preload mode
     TIM1->CCER    |= (1 << 12);                 // CC4E = 1 (Enable TIM1 CH4)
     TIM1->BDTR    |= (1 << 15);                 // Enable main output (MOE)
